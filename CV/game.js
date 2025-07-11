@@ -1,4 +1,4 @@
-// === Variabel Global ===
+// variebel global
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 canvas.width = 800;
@@ -46,7 +46,7 @@ let player = {
 
 let bullets = [];
 
-// === Input Events ===
+// input key
 document.addEventListener("keydown", (e) => keys[e.key] = true);
 document.addEventListener("keyup", (e) => keys[e.key] = false);
 
@@ -219,7 +219,7 @@ function update() {
   }
 
   for (let i = 0; i < enemyProjectiles.length; i++) {
-  enemyProjectiles[i].x += enemyProjectiles[i].speed; // speed negatif → ke kiri
+  enemyProjectiles[i].x += enemyProjectiles[i].speed;
 
   if (checkCollision(player, enemyProjectiles[i])) {
     player.hp--;
