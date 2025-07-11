@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stamina Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="mainMenu" style="position:absolute; top:100px; left:200px; background:white; padding:20px; border:2px solid black;">
+    <h2>🏁 Start Menu</h2>
+    <p>💰 Coin Tersisa: <span id="permCoin">0</span></p>
+
+    <div>
+      <p>❤️ Max HP (+1, max 10) - 10 coin <button onclick="buyUpgrade('maxHp')">Beli</button></p>
+      <p>💪 Max Stamina (+20) - 10 coin <button onclick="buyUpgrade('maxStamina')">Beli</button></p>
+      <p>💰 Bonus Coin (+10%) - 10 coin <button onclick="buyUpgrade('bonus')">Beli</button></p>
+    </div>
+
+    <button onclick="startGame()">▶️ Mulai Game</button>
+  </div>
+
+  <canvas id="gameCanvas" width="800" height="400" style="border:1px solid black; display:none;"></canvas>
+
+  <!-- Masukkan script game.js di sini -->
+  <script src="game.js"></script>
+</body>
+</html>
